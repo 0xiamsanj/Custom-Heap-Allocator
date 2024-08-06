@@ -1,13 +1,11 @@
-#include "include/malloc.h"
+#include "include/calloc.h"
 #include <stdio.h>
 
 int main(void){
     int size = 4;
-    int* ptr = (int*)c_malloc(4*sizeof(int));
+    int* ptr = (int*)calloc(size,sizeof(int));
     printf("Memory allocated: %p",ptr);
-    printf("\n");
-    ptr[0] = 1;
-    ptr[1] = 2;
+    printf("\nEnter the values in the array");
     for(int i=0;i<size;i++){
         scanf("%d",&ptr[i]);
     }

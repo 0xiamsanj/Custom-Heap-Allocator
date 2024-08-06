@@ -41,8 +41,8 @@ t_block heap_extension (t_block last, size_t size){
    */
 void split_block(t_block block, size_t size){
     t_block new;
-    new = (t_block)b->data + size;
-    new->size = block->size - size - BLOCK_SIZE;
+    new = (t_block)block->data + size;
+    new->size = block->size - size - META_BLOCK_SIZE;
     new->next = block->next;
     new->free = 1;
     block->size = size;
