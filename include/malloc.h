@@ -49,7 +49,7 @@ void split_block(t_block block, size_t size){
     block->next = new;
 }
 
-void *c_malloc(size_t size){
+void *myMalloc(size_t size){
     t_block     last,block;
     size = align4(size);
     if (global_base){

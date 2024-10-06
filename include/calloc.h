@@ -5,7 +5,7 @@ void* calloc(size_t number, size_t size){
     size_t      *new_block;
     size_t      i,size4;
 
-    new_block = c_malloc(number*size);
+    new_block = myMalloc(number*size);
     if(new_block){
         size4 = align4(size) ;
         for( i=0;i<size4;i++){

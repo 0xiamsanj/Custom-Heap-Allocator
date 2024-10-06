@@ -3,7 +3,7 @@
 
 int main(void){
     int size = 4;
-    int* ptr = (int*)c_malloc(4*sizeof(int));
+    int* ptr = (int*)myMalloc(4*sizeof(int));
     printf("Memory allocated: %p",ptr);
     printf("\n");
     ptr[0] = 1;
